@@ -8,7 +8,8 @@
 */
 int main(void)
 {
-	int n, gp;
+	int n;
+	int gp;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -16,8 +17,8 @@ int main(void)
 	if (n > 5)
 		printf("Last digit of %d is %d and is greater than 5\n", n, gp);
 	if (n == 0)
-		printf("Ladt digit of %d is %d and is 0\n", n, n);
+		printf("Last digit of %d is %d and is 0\n", n, gp);
 	else
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, gp);
 	return (0);
 }
