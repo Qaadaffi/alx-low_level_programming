@@ -6,29 +6,29 @@
  *
  * Return: the resulting string
  */
-char *cap_string(char *p)
+char *cap_string(char *s)
 {
-	int i, j;
+	int i = 0;
 
-	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
-		'!', '?', '"', '(', ')', '{', '}'};
-
-	for (i = 0; p[i] != '\0'; i++)
+	while (s[++i])
 	{
-		if (i == 0 && p[i] >= 'a' && p[i] <= 'z')
-			p[i] -= 32;
+		while (!(s[i] >= 'a' && s[i] <= 'z'))
+			i++;
 
-		for (j = 0; j < 13; j++)
-		{
-			if (p[i] == spe[j])
-			{
-				if (p[i + 1] >= 'a' && p[i + 1] <= 'z')
-				{
-					p[i + 1] -= 32;
-				}
-			}
-		}
+		if (s[i - 1] == ' ' ||
+				s[i - 1] == '\t' ||
+				s[i - 1] == '\n' ||
+				s[i - 1] == ',' ||
+				s[i - 1] == ';' ||
+				s[i - 1] == '.' ||
+				s[i - 1] == '!' ||
+				s[i - 1] == '?' ||
+				s[i - 1] == '"' ||
+				s[i - 1] == '(' ||
+				s[i - 1] == ')' ||
+				s[i - 1] == '{' ||
+				s[i - 1] == '}')
+			s[i] -= 32;
 	}
-
-	return (p);
+	return (s);
 }
