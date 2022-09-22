@@ -1,33 +1,31 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * this function appends a source string to the destination string,
- * and returns pointer to the resulting destination string. 
- * @src: sting to be appended
+ * _strncat - appends n bytes from source string to destination string 
  * @dest: destination string
- * @n: number of bytes of src string to be appended
+ * @src: source string
+ * @n: number of bytes of source string to append
  *
- * Return: pointer to the resulting dest string.
+ * Return: a pointer to the resulting string dest
  */
-char *_strncat(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n)
 {
-	int b, d;
+	int a, b;
 
+	a = 0;
 	b = 0;
-	d = 0;
 
-	while (dest[b] != '\0')
-		b++;
+	while (dest[a] != '\0')
+		a++;
 
-	while (src[d] != '\0' && d < n)
+	while (src[b] != '\0' && b < n)
 	{
-		dest[b] = src[d];
+		dest[a] = src[b];
+		a++;
 		b++;
-		d++;
 	}
 
-	dest[b] = '\0';
+	dest[a] = '\0';
 
 	return (dest);
 }
