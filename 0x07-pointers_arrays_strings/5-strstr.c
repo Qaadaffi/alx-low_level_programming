@@ -1,6 +1,5 @@
-#include <stdio.h>
 #include "main.h"
-
+#include <stdio.h>
 /**
  * *_strstr is function finds the first occurrence of a substring in a string
  * @haystack: the string to be searched for a substring
