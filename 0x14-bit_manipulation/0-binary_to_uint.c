@@ -1,7 +1,5 @@
 #include "main.h"
 
-int check_valid_string(const char *b);
-
 /**
  * binary_to_uint - is a function that converts a binary number to an unsigned
  * int
@@ -9,6 +7,7 @@ int check_valid_string(const char *b);
  * Return: the converted number
  */
 
+int check_valid_string(const char *b);
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal = 0;
